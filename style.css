@@ -1,44 +1,164 @@
+:root {
+    --bg-dark: #101010;
+    --bg-card: #131313;
+    --bg-accent: #1C0155;
+    --primary: #B998FF;
+    /* Light Purple */
+    --accent-pink: #EC35A3;
+    --accent-blue: #53BCF5;
+    --accent-red: #CF2D1E;
+    --accent-green: #65D36E;
+    --text-main: #FFFFFF;
+    --text-dim: #DDDDDD;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
     line-height: 1.6;
     margin: 0;
-    color: #333;
 }
 
 .container {
-    max-width: 800px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 2rem;
 }
 
+/* Navigation */
 nav {
-    background: #f8f9fa;
-    border-bottom: 1px solid #ddd;
-    padding: 1rem 0;
-}
-
-nav .container {
+    padding: 1.5rem 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.links a {
-    margin-left: 15px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
     text-decoration: none;
-    color: #007bff;
 }
 
-.hero {
-    background: #007bff;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-}
-
-footer {
-    text-align: center;
-    padding: 40px 0;
+.nav-links a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: var(--text-dim);
     font-size: 0.9rem;
-    color: #777;
+}
+
+.nav-links a:hover {
+    color: var(--accent-blue);
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 5rem 0;
+    min-height: 60vh;
+}
+
+.hero-content {
+    flex: 1.2;
+}
+
+.hero-image {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(45deg, var(--primary), var(--accent-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-p {
+    font-size: 1.25rem;
+    color: var(--text-dim);
+    margin-bottom: 2rem;
+}
+
+.btn-appstore {
+    background: var(--text-main);
+    color: var(--bg-dark);
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.btn-appstore:hover {
+    transform: translateY(-3px);
+    background: var(--accent-blue);
+}
+
+/* Screenshot Placeholder */
+.phone-mockup {
+    width: 280px;
+    height: 580px;
+    background: var(--bg-card);
+    border: 8px solid #222;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Features */
+.features-section {
+    background: var(--bg-accent);
+    padding: 5rem 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #222;
+}
+
+.card h3 {
+    margin-top: 0;
+    color: var(--accent-green);
+}
+
+/* Contact */
+.contact-section {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.email-link {
+    color: var(--accent-blue);
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
 }
