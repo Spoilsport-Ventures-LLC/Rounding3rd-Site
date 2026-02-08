@@ -17,6 +17,7 @@
                 <div class="nav-links">
                     <a href="tos.html">Terms</a>
                     <a href="privacy.html">Privacy</a>
+                    <a href="#" id="sticky-download" class="btn-nav">Download</a>
                 </div>
             </div>
         </nav>
@@ -41,15 +42,31 @@
             <h2 style="text-align: center; font-size: 2.5rem;">Insights, not just info.</h2>
             <div class="grid">
                 <div class="card">
-                    <h3 style="color: var(--accent-blue);">Funnel Analytics</h3>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-blue)"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;">
+                        <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                        <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                    </svg>
+                    <h3>Funnel Analytics</h3>
                     <p>Visualize your success rate from initial match to the third date and beyond.</p>
                 </div>
+
                 <div class="card">
-                    <h3 style="color: var(--accent-pink);">Venue Scoring</h3>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-pink)"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <h3>Venue Scoring</h3>
                     <p>Keep track of which coffee shops, bars, and restaurants yield the best results.</p>
                 </div>
+
                 <div class="card">
-                    <h3 style="color: var(--primary);">Pattern Recognition</h3>
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 20px;">
+                        <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                    </svg>
+                    <h3>Pattern Recognition</h3>
                     <p>Identify common traits in your best (and worst) encounters to refine your preferences.</p>
                 </div>
             </div>
@@ -67,6 +84,19 @@
     <footer style="padding: 2rem 0; text-align: center; border-top: 1px solid #222;">
         <p style="color: #666;">&copy; 2026 Rounding Third. All rights reserved.</p>
     </footer>
+
+    <script>
+        const stickyBtn = document.getElementById('sticky-download');
+
+        window.onscroll = function () {
+            // Show button after scrolling 300px (roughly past the hero text)
+            if (window.pageYOffset > 300) {
+                stickyBtn.classList.add('show');
+            } else {
+                stickyBtn.classList.remove('show');
+            }
+        };
+    </script>
 </body>
 
 </html>
