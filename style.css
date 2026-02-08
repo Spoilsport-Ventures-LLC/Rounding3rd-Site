@@ -18,6 +18,7 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     margin: 0;
+    overscroll-behavior-y: none;
 }
 
 .container {
@@ -28,55 +29,62 @@ body {
 
 /* Navigation */
 nav {
-    padding: 1.5rem 0;
-    background-color: var(--bg-dark);
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 1000;
+    background-color: rgba(16, 16, 16, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    flex-shrink: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 .nav-flex {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary);
-    text-decoration: none;
+.nav-logo-img {
+    height: 40px;
+    /* Adjust based on your uploaded logo's proportions */
+    width: auto;
+    display: block;
 }
+
 
 .nav-links a {
     margin-left: 1.5rem;
     text-decoration: none;
     color: var(--text-dim);
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: var(--accent-blue);
+    color: var(--accent-red);
 }
 
-/* Navigation Download Button */
-.btn-nav {
-    background: var(--accent-blue);
-    color: var(--bg-dark) !important;
-    padding: 0.5rem 1.2rem;
-    border-radius: 8px;
-    font-weight: 700;
-    margin-left: 1.5rem;
+.nav-logo-img {
+    height: 48px;
+    /* This keeps the bar slim and professional */
+    width: auto;
+    display: block;
+    transition: transform 0.2s ease;
+}
 
-    /* Start hidden and small */
-    opacity: 0;
-    visibility: hidden;
-    transform: scale(0.8);
-    transition: all 0.3s ease-in-out;
+.logo:hover .nav-logo-img {
+    transform: scale(1.05);
+    /* Subtle pop when hovering over the logo */
 }
 
 /* The class that JavaScript will add when we scroll */
