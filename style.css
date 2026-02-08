@@ -29,6 +29,16 @@ body {
 /* Navigation */
 nav {
     padding: 1.5rem 0;
+    background-color: var(--bg-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-flex {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +56,7 @@ nav {
     text-decoration: none;
     color: var(--text-dim);
     font-size: 0.9rem;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -188,4 +199,79 @@ h1 {
 
 .content-page ul {
     padding-left: 1.2rem;
+}
+
+/* Animation Definitions */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Applying the Animations */
+.hero-content {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.phone-mockup {
+    animation: fadeInUp 1s ease-out forwards, float 5s ease-in-out infinite;
+    animation-delay: 0.2s, 1s;
+    /* Delay the float until after it slides in */
+}
+
+.hero-image img {
+    /* Ensures the image inside the mockup also looks smooth */
+    transition: transform 0.3s ease;
+}
+
+/* Feature Card Hover Effects */
+.card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+/* Card 1 Glow (Blue) */
+.card:nth-child(1):hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-blue);
+    box-shadow: 0 10px 30px -10px rgba(83, 188, 245, 0.4);
+}
+
+/* Card 2 Glow (Pink) */
+.card:nth-child(2):hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-pink);
+    box-shadow: 0 10px 30px -10px rgba(236, 53, 163, 0.4);
+}
+
+/* Card 3 Glow (Purple) */
+.card:nth-child(3):hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 10px 30px -10px rgba(185, 152, 255, 0.4);
+}
+
+/* Smooth Icon Transition */
+.card h3 {
+    transition: color 0.3s ease;
 }
