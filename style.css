@@ -259,6 +259,14 @@ h1 {
     box-shadow: 0 10px 30px -10px rgba(185, 152, 255, 0.4);
 }
 
+/* --- Content Pages (Legal) --- */
+.content-page h2,
+.content-page h3 {
+    color: var(--accent-blue);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
 /* --- Footer --- */
 footer {
     background-color: var(--bg-footer);
