@@ -34,11 +34,29 @@ nav {
     align-items: center;
 }
 
+.nav-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
     color: var(--primary);
     text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 48px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
@@ -174,7 +192,8 @@ h1 {
     margin-bottom: 2rem;
 }
 
-.content-page h2 {
+.content-page h2,
+.content-page h3 {
     color: var(--primary);
     margin-top: 2rem;
 }
