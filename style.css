@@ -229,6 +229,11 @@ footer {
     margin-top: 4rem;
 }
 
+body.splash-page .splash-footer {
+    margin-top: 0;
+    background: linear-gradient(180deg, #101010 0%, #0d0d0d 100%);
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
