@@ -48,10 +48,19 @@ nav {
     text-decoration: none;
 }
 
+nav .logo {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 auto;
+    line-height: 0;
+}
+
 .nav-logo-img {
     height: 48px;
     width: auto;
     display: block;
+    max-width: min(280px, 45vw);
+    object-fit: contain;
 }
 
 .nav-links {
