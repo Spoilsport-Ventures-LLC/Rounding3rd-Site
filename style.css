@@ -239,13 +239,23 @@ nav .logo {
     pointer-events: none;
 }
 
-.splash-logo {
-    width: clamp(96px, 14vw, 132px);
-    padding: 0.9rem;
+.splash-logo-shell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(108px, 15vw, 144px);
+    padding: 0.5rem;
     background: rgba(255, 255, 255, 0.03);
     border: 2px solid rgba(207, 45, 30, 0.18);
     border-radius: 32px;
     box-shadow: var(--shadow-soft);
+}
+
+.splash-logo {
+    width: 100%;
+    max-width: 104px;
+    height: auto;
+    object-fit: contain;
 }
 
 .splash-title {
@@ -625,8 +635,24 @@ footer::after {
         border-radius: 28px;
     }
 
+    .splash-logo-shell {
+        width: min(128px, 36vw);
+        padding: 0.4rem;
+        border-radius: 28px;
+    }
+
+    .splash-logo {
+        max-width: 96px;
+    }
+
     .signup-form {
         flex-direction: column;
+    }
+
+    .signup-form input {
+        flex: 0 0 auto;
+        min-height: 3.5rem;
+        padding: 1rem 1.1rem;
     }
 
     .btn-appstore {
@@ -651,6 +677,15 @@ footer::after {
 
     .splash-content {
         padding: 2rem 1.25rem;
+    }
+
+    .splash-logo-shell {
+        width: min(112px, 34vw);
+        padding: 0.35rem;
+    }
+
+    .splash-logo {
+        max-width: 84px;
     }
 
     .footer-links {
