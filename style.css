@@ -1,35 +1,25 @@
 :root {
     --ink: #101010;
-    --ink-soft: #131313;
     --ink-elevated: #171717;
     --ink-panel: #1d1d1d;
     --ink-panel-soft: rgba(255, 255, 255, 0.025);
-    --royal: #1c0155;
     --lavender: #b998ff;
     --red: #cf2d1e;
     --blue: #53bcf5;
     --green: #65d36e;
     --pink: #ec35a3;
-    --gray: #dddddd;
     --white: #ffffff;
     --paper: #0f0f10;
     --line: rgba(255, 255, 255, 0.07);
     --line-strong: rgba(255, 255, 255, 0.12);
     --shadow: 0 24px 60px rgba(0, 0, 0, 0.34);
     --shadow-soft: 0 14px 34px rgba(0, 0, 0, 0.24);
-    --blue-wash: rgba(83, 188, 245, 0.1);
     --red-wash: rgba(207, 45, 30, 0.18);
-    --green-wash: rgba(101, 211, 110, 0.12);
     --bg-dark: var(--ink);
-    --bg-card: var(--ink-soft);
-    --bg-accent: var(--royal);
     --primary: var(--lavender);
     --accent-pink: var(--pink);
     --accent-blue: var(--blue);
-    --accent-red: var(--red);
-    --accent-green: var(--green);
     --text-main: var(--white);
-    --text-dim: var(--gray);
 }
 
 *,
@@ -355,17 +345,6 @@ nav .logo {
     outline: none;
 }
 
-.hero,
-.hero-content,
-.hero-image,
-.phone-mockup,
-.features-section,
-.grid,
-.card,
-.email-link {
-    /* Retained for other pages/components that may still use these hooks. */
-}
-
 .content-page {
     width: 100%;
     max-width: 860px;
@@ -394,7 +373,7 @@ nav .logo {
 .content-page h3 {
     margin-top: 1.8rem;
     margin-bottom: 0.75rem;
-    color: var(--green);
+    color: var(--blue);
     font-size: 1.2rem;
 }
 
