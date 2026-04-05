@@ -105,6 +105,52 @@
                 </div>
             </div>
         </section>
+
+        <section class="showcase-section" aria-labelledby="showcase-heading">
+            <div class="container">
+                <div class="showcase-header">
+                    <div class="showcase-copy">
+                        <h2 class="section-title showcase-title" id="showcase-heading">See the full lineup.</h2>
+                    </div>
+                </div>
+
+                <div class="showcase-carousel" data-carousel>
+                    <figure class="showcase-slide is-active" data-slide aria-label="Home screen screenshot">
+                        <div class="showcase-media">
+                            <img src="img/showcase-home.png" alt="Rounding Third home screen screenshot">
+                        </div>
+                    </figure>
+                    <figure class="showcase-slide" data-slide aria-label="Players screen screenshot">
+                        <div class="showcase-media">
+                            <img src="img/showcase-players.png" alt="Rounding Third players screen screenshot">
+                        </div>
+                    </figure>
+                    <figure class="showcase-slide" data-slide aria-label="Profile detail screenshot">
+                        <div class="showcase-media">
+                            <img src="img/showcase-profile.png" alt="Rounding Third profile detail screenshot">
+                        </div>
+                    </figure>
+                    <figure class="showcase-slide" data-slide aria-label="Stats dashboard screenshot">
+                        <div class="showcase-media">
+                            <img src="img/showcase-stats.png" alt="Rounding Third stats dashboard screenshot">
+                        </div>
+                    </figure>
+                </div>
+
+                <div class="showcase-controls" aria-label="Screenshot carousel controls">
+                    <button type="button" class="showcase-arrow" data-carousel-prev aria-label="Show previous screenshot">
+                        <span aria-hidden="true">&larr;</span>
+                    </button>
+                    <button type="button" class="showcase-arrow showcase-arrow--timed" data-carousel-next aria-label="Show next screenshot">
+                        <svg class="showcase-arrow-progress" viewBox="0 0 56 56" aria-hidden="true">
+                            <circle class="showcase-arrow-progress-track" cx="28" cy="28" r="25"></circle>
+                            <circle class="showcase-arrow-progress-indicator" cx="28" cy="28" r="25"></circle>
+                        </svg>
+                        <span aria-hidden="true">&rarr;</span>
+                    </button>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -131,6 +177,8 @@
             <p>&copy; 2026 Spoilsport Ventures LLC</p>
         </div>
     </footer>
+
+    <script src="js/home-carousel.js"></script>
 </body>
 
 </html>
