@@ -11,7 +11,7 @@ function loadFooter() {
                 <div class="link-group">
                     <h4>Product</h4>
                     <a href="index.html">Home</a>
-                    <a href="mailto:support@roundingthird.app">Support</a>
+                    <a href="mailto:support@roundingthird.app" target="_blank" rel="noopener noreferrer">Support</a>
                 </div>
                 <div class="link-group">
                     <h4>Legal</h4>
