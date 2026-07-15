@@ -1,3 +1,17 @@
+const scrollToSupport = () => {
+    if (window.location.hash !== "#support") {
+        return;
+    }
+
+    const supportSection = document.getElementById("support");
+    if (supportSection) {
+        window.requestAnimationFrame(() => supportSection.scrollIntoView({ block: "start" }));
+    }
+};
+
+window.addEventListener("load", scrollToSupport);
+window.addEventListener("hashchange", scrollToSupport);
+
 document.addEventListener("DOMContentLoaded", () => {
     const carousel = document.querySelector("[data-carousel]");
     if (!carousel) {

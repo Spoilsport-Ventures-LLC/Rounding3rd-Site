@@ -605,6 +605,10 @@ footer {
     color: var(--white);
 }
 
+#support {
+    scroll-margin-top: 1rem;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
